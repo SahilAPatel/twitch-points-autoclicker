@@ -2,7 +2,7 @@
   "name": "Twitch Channel Points Autoclicker",
   "description": "Autoclicker for channel points on Twitch",
   "version": "1.0",
-  "manifest_version": 3,
+  "manifest_version": 2,
    "icons": {
       "128": "assets/icon128.png",
       "96": "assets/icon96.png",
@@ -10,14 +10,12 @@
       "16": "assets/icon16.png"
    },
    "homepage_url": "https://github.com/SahilAPatel/twitch-points-autoclicker",
-
-
-
+   "web_accessible_resources": [ "src/autoClicker.js" ],
    "content_scripts": [ {
       "all_frames": true,
-      "js": [ "dist/src/index.js" ],
+      "js": [ "src/index.js" ],
       "matches": [ "*://*.twitch.tv/*" ],
       "run_at": "document_idle"
-   } ],
-   "web_accessible_resources": [ "dist/src/auto-clicker.js" ]
+   } ]
+
 }
